@@ -31,7 +31,7 @@ jobs:
               - 'src/**'
   build:
     needs: changes
-    if: github.ref == 'refs/heads/main' && needs.changes.outputs.backend == 'true'
+    if: github.ref == 'refs/heads/main' && needs.changes.outputs.src == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Login to Docker Hub
